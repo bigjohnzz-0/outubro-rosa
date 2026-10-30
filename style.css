@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #faf6f7;
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f2d6e1;
+  border-bottom: 2px solid #f2d6e1;
+  padding: 30px 20px 20px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.laco-header {
+  height: 35px;
+  width: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+header h1 {
+  color: #8c3b58;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+header p {
+  color: #888;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #6b525d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: #f7ebf0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover, nav a.active {
+  background-color: #8c3b58;
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(140, 59, 88, 0.5);
+  transform: translateY(-2px);
+}
+
+main {
+  flex: 1;
+  max-width: 950px;
+  width: 90%;
+  margin: 35px auto;
+}
+
+.card, .hero-card {
+  background: #ffffff;
+  border: 1px solid #ebd3dd;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+h2 {
+  color: #8c3b58;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #8c3b58;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #8c3b58;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(140, 59, 88, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6e2c43;
+  box-shadow: 0 8px 20px rgba(140, 59, 88, 0.6);
+  transform: translateY(-2px);
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+ul.lista-simples {
+  margin-left: 20px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+ul.lista-simples li {
+  margin-bottom: 8px;
+}
+
+.alert-box {
+  background-color: #fff4f7;
+  border-left: 4px solid #8c3b58;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: #8c3b58;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.logo-inst {
+  height: 55px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+footer {
+  background-color: #f2d6e1;
+  border-top: 1px solid #ebd3dd;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 15px 15px;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  .laco-header {
+    height: 28px;
+  }
+  nav ul {
+    gap: 8px;
+  }
+  nav a {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  main {
+    margin: 20px auto;
+    width: 95%;
+  }
+  .hero-card, .card {
+    padding: 20px;
+  }
+  .hero-card {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}
